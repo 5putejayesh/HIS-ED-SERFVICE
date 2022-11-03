@@ -85,6 +85,9 @@ public class EdServiceImpl implements EdService {
 		eligDtls.setCaseNo(caseNo);
 		eligDtls.setHoldersName(citizenAppEntity.getFullName());
 		eligDtls.setSsn(citizenAppEntity.getSsn());
+		eligDtls.setEmail(citizenAppEntity.getEmail());
+		eligDtls.setGender(citizenAppEntity.getGender());
+		eligDtls.setMobile(citizenAppEntity.getPhno());
 		
 		eligDtlsRepo.save(eligDtls);
 		

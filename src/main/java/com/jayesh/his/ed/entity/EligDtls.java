@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import lombok.Data;
 
 @Data
@@ -21,7 +24,7 @@ public class EligDtls {
 	private Integer eligId;	
 	private Long caseNo;
 	private String holdersName;			
-	private Integer mobile;			
+	private Long mobile;			
 	private String email;	
 	@Column(length = 1)
 	private String gender;			
@@ -32,7 +35,11 @@ public class EligDtls {
 	private String denielReason;
 	private LocalDate planStartDate;	
 	private LocalDate planEndDate;	
-	private LocalDate createDate;		
+	@Column(updatable = false)
+	@CreationTimestamp
+	private LocalDate createDate;
+	@Column(insertable = false)
+	@UpdateTimestamp
 	private LocalDate updateDate;		
 	private String createdBy;		
 	private String updatedBy; 	

@@ -18,8 +18,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
 	private ApiInfo apiInfo() {
-		return new ApiInfo("Dc module of HIS application",
-				"DC Module to collect citizens data", "1", "Term of Service",
+		return new ApiInfo("ED module of HIS application",
+				"ED Module to determine eligibility", "1", "Term of Service",
 				new Contact("Jayesh", "", "5putejayesh@gmail.com"), "License-1.0", "License URL",
 				Collections.emptyList());
 	}

@@ -1,7 +1,5 @@
 package com.jayesh.his.ed.entity;
 
-import java.sql.Blob;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +20,6 @@ public class CoTriggerEntity {
 	private Integer eligId;	
 	private String triggerStatus;
 	@Lob
-	private Blob fileData;
+	private byte[] fileData;
 
 }
